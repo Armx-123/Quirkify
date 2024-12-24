@@ -3,6 +3,8 @@ import os
 import io
 import traceback
 import subprocess
+
+
 def unzip_file(zip_file_path, extract_to='.'):
     try:
         # Read the ZIP file into memory
@@ -20,14 +22,17 @@ def unzip_file(zip_file_path, extract_to='.'):
             zip_ref.extractall(extract_to)
         print(f"Unzipped successfully to {os.path.abspath(extract_to)}")
 
-        # List the folders after extracting
-        print("Listing folders:")
+        # List folders and Python files
+        print("Listing folders and Python files:")
         if not os.path.exists(extract_to):
             print("Error: Extraction path does not exist.")
             return
         for root, dirs, files in os.walk(extract_to):
             for dir_name in dirs:
                 print(f"Folder: {os.path.join(root, dir_name)}")
+            for file_name in files:
+                if file_name.endswith('.py'):
+                    print(f"Python File: {os.path.join(root, file_name)}")
 
     except Exception as e:
         print("An unexpected error occurred:")
@@ -37,6 +42,7 @@ def unzip_file(zip_file_path, extract_to='.'):
 zip_file_path = 'zip.zip'  # Replace with your file path
 extract_to = '.'  # Replace with your desired extraction path
 unzip_file(zip_file_path, extract_to)
+
 
 
 subprocess.run(["python", "main.py"], check=True)
