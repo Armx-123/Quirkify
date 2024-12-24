@@ -33,3 +33,6 @@ jobs:
 
       - name: Run Bot
         run: python download.py
+        
+      - name: Unzip
+        run: python unzip.py
