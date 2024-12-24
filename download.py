@@ -88,4 +88,3 @@ if __name__ == "__main__":
     import asyncio
 
     asyncio.run(download_and_merge_zip())
-    subprocess.run(["python", "unzip.py"], check=True)    
