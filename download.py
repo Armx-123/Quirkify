@@ -4,7 +4,7 @@ import zipfile
 import shutil
 import subprocess
 # Define constants
-MERGED_ZIP_PATH = "merged.zip"
+MERGED_ZIP_PATH = "zip.zip"
 TEMP_DIR = "temp"  # Temporary directory for storing ZIP parts
 TOKEN = os.getenv('TOKEN')  # Fetch bot token from environment
 CHANNEL_ID = 1318789217509441586  # Replace with your target channel ID
