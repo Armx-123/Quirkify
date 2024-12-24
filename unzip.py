@@ -2,7 +2,7 @@ import zipfile
 import os
 import io
 import traceback
-import subprocess
+
 
 
 def unzip_file(zip_file_path, extract_to='.'):
@@ -45,4 +45,4 @@ unzip_file(zip_file_path, extract_to)
 
 
 
-subprocess.run(["python", "main.py"], check=True)
+
