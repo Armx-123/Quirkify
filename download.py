@@ -3,7 +3,7 @@ import discord
 import zipfile
 from discord.ext import commands
 import shutil
-
+import subprocess
 # Define constants
 MERGED_ZIP_PATH = "zip.zip"
 TEMP_DIR = "temp"  # Temporary directory for storing ZIP parts
