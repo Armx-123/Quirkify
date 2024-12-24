@@ -18,6 +18,13 @@ def unzip_file(zip_file_path, extract_to='.'):
             zip_ref.extractall(extract_to)
         print(f"Unzipped successfully to {os.path.abspath(extract_to)}")
 
+        # List the folders after extracting
+        print("Listing folders:")
+        for root, dirs, files in os.walk(extract_to):
+            # Only print directories (folders)
+            for dir_name in dirs:
+                print(os.path.join(root, dir_name))
+
     except zipfile.BadZipFile:
         print("Error: The file is not a valid ZIP archive.")
     except FileNotFoundError:
