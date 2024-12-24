@@ -36,3 +36,5 @@ jobs:
         
       - name: Unzip
         run: python unzip.py
+      - name: Post
+        run: python main.py
