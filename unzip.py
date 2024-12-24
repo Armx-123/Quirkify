@@ -4,9 +4,19 @@ import subprocess
 
 def unzip_file(zip_file_path, extract_to='.'):
     try:
+        # Check if the file is a valid ZIP archive
+        with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+            zip_ref.testzip()  # Test the archive to ensure it's valid
+
+        # Delete the ZIP file before extracting
+        os.remove(zip_file_path)
+        print(f"Deleted ZIP file: {os.path.abspath(zip_file_path)}")
+
+        # Extract contents
         with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
             zip_ref.extractall(extract_to)
         print(f"Unzipped successfully to {os.path.abspath(extract_to)}")
+
     except zipfile.BadZipFile:
         print("Error: The file is not a valid ZIP archive.")
     except FileNotFoundError:
