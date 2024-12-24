@@ -6,7 +6,7 @@ from discord.ext import commands
 # Define constants
 MERGED_ZIP_PATH = "zip.zip"
 TEMP_DIR = "temp"  # Temporary directory for storing ZIP parts
-TOKEN = 'MTIyNzg5NzY2MjU3MzkwMzg3Mg.GI3STJ.id27Ay5uUSrM8kNHhyb25MX8txmv_Zt75K92IM'
+TOKEN = os.environ['TOKEN']
 # Replace with the ID of the channel where the bot should upload the ZIP file
 CHANNEL_ID = 1303910229448200293  # Replace with your target channel ID
 
