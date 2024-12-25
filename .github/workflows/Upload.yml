@@ -35,10 +35,10 @@ jobs:
         run: TEST_SECRET=${{ secrets.API}}
 
       - name: Run Bot
-        run: python download.py
+        run: python3 download.py
         
       - name: Unzip
-        run: python unzip.py
+        run: python3 unzip.py
         
       - name: Post
-        run: python main.py
+        run: python3 main.py
