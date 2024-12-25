@@ -19,6 +19,9 @@ jobs:
 
       - name: Setup FFmpeg
         uses: federicocarboni/setup-ffmpeg@v3.1
+                    
+      - name: Setup ImageMagick
+        uses: jruipinto/ImageMagick-action@v1
 
       - name: Set up Python
         uses: actions/setup-python@v3
@@ -36,5 +39,6 @@ jobs:
         
       - name: Unzip
         run: python unzip.py
+        
       - name: Post
         run: python main.py
