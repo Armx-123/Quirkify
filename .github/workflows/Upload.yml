@@ -42,8 +42,8 @@ jobs:
         
       - name: Copy Font to Local Fonts Directory
         run: |
-          mkdir -p ~/.local/share/fonts  # Ensure the fonts directory exists
-          cp bb.ttf ~/.local/share/fonts
+          mkdir -p ~/.local/share/fonts/sample  # Ensure the fonts directory exists
+          cp bb.ttf ~/.local/share/fonts/sample
         
       - name: Post
         run: python3 main.py
