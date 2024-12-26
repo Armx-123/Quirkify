@@ -34,6 +34,7 @@ pillow==10.4.0
 proglog==0.1.10
 propcache==0.2.1
 pydub==0.25.1
+pysrt==1.1.2
 python-dotenv==1.0.1
 regex==2024.11.6
 requests==2.32.3
