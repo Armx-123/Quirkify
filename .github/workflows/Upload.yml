@@ -40,10 +40,6 @@ jobs:
       - name: Unzip
         run: python3 unzip.py
         
-      - name: Copy Font to Local Fonts Directory
-        run: |
-          mkdir -p ~/.local/share/fonts/sample  # Ensure the fonts directory exists
-          cp bb.ttf ~/.local/share/fonts/sample
         
       - name: Post
         run: python3 main.py
